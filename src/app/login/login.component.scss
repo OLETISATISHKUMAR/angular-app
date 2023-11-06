@@ -1,0 +1,72 @@
+.mui-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .mui-panel {
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Lighter border color */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #004a9f; /* Highlighted text color */
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .mui-textfield {
+        margin-bottom: 20px;
+        input {
+          width: 90%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 16px;
+          transition: border-color 0.3s;
+          &:focus {
+            border-color: #004a9f; /* Highlight border color on focus */
+          }
+        }
+
+        label {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          background-color: white;
+          padding: 0 5px;
+          transition: transform 0.3s;
+          transform: translateY(-80%);
+        }
+
+        input:focus + label,
+        input:valid + label {
+          transform: translateY(-110%);
+          font-size: 14px;
+        }
+      }
+
+      button.mui-btn {
+        width: 100%;
+        background-color: #3370b7;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #004a9f;
+        }
+      }
+    }
+  }
+}

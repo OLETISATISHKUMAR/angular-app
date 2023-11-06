@@ -1,0 +1,34 @@
+<mat-toolbar class="mat-elevation-z8" fxLayout="row" fxLayoutAlign="space-between center">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+  </button>
+  Shopping Cart
+  <div fxFlex></div>
+
+  <button mat-button class="logout-button">
+    Logout
+  </button>
+</mat-toolbar>
+
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <button mat-button class="menu-button" routerLink="/home">
+          <span class="tab">Home</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/movies">
+          <span  class="tab" >Movies</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/food">
+          <span class="tab">Food</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/orders">
+          <span class="tab">Orders</span>
+        </button>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>

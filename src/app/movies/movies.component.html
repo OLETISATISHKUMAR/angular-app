@@ -1,0 +1,18 @@
+<div class="movies">
+    <div class="movie-list">
+      <div class="movie-row">
+        <div class="movie" *ngFor="let movie of movies">
+          <div class="movie-card">
+            <img [src]="movie.imageUrl" alt="Movie Poster" class="movie-image" />
+            <div class="movie-details">
+              <h3>{{ movie.title }}</h3>
+              <p>Genre: {{ movie.genre }}</p>
+              <p>Actor: {{ movie.actor }}</p>
+              <p>Director: {{ movie.director }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
