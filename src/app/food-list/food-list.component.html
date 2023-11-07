@@ -1,0 +1,10 @@
+<div class="food-list">
+  <div class="food-card" *ngFor="let foodItem of foodItems">
+    <div class="food-card-inner">
+      <img [src]="'assets/' + foodItem.image" alt="{{ foodItem.name }}">
+      <h3>{{ foodItem.name }}</h3>
+      <p>Price: ${{ foodItem.price }}</p>
+      <button (click)="addToCart(foodItem)">Add to Cart</button>
+    </div>
+  </div>
+</div>

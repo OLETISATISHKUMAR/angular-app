@@ -1,0 +1,6 @@
+<div class="carousel-container">
+    <div class="carousel-slide" *ngFor="let image of images; let i = index"
+        [ngStyle]="{'display': i === currentIndex ? 'block' : 'none'}">
+        <img [src]="image" class="banner-image" alt="Image {{i + 1}}">
+    </div>
+</div>

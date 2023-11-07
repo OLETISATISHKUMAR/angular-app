@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,9 +16,11 @@ import { CardComponent } from './card/card.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { NavbarComponent } from './navbar/navbar.component';
 import { MoviesComponent } from './movies/movies.component';
-
+import { CarouselComponent } from './carousel/carousel.component';
+import { FoodListComponent } from './food-list/food-list.component';
+import { OrdersComponent } from './orders/orders.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent, HomeComponent, NavbarComponent, MoviesComponent],
+  declarations: [AppComponent, LoginComponent, SignupComponent, HomeComponent, NavbarComponent, MoviesComponent, CarouselComponent, FoodListComponent, OrdersComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,7 +31,8 @@ import { MoviesComponent } from './movies/movies.component';
     MatIconModule, 
     MatDividerModule,
     FlexLayoutModule,
-    CardComponent
+    CardComponent,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
